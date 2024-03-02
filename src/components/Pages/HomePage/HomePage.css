@@ -1,0 +1,38 @@
+.home{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    background-image: url(../../../images/bg.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.gameboard{
+    width: 72.5%;
+}
+.leaderboard{
+    width: 22.5%;
+}
+
+
+@media (max-width: 1300px) {
+    .gameboard{
+        height: 70%;  
+    }
+    .leaderboard{
+        width: 20%;
+    }
+}
+
+@media (max-width: 500px) {
+    .home{
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .leaderboard{
+        width: 90%;
+    }
+}
