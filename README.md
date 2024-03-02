@@ -10,11 +10,11 @@ There will be a button to start the game. When the game is started there will be
 
 # Rules –
 
--If the card drawn from the deck is a cat card, then the card is removed from the deck.
--If the card is exploding kitten (bomb) then the player loses the game.
--If the card is a defusing card, then the card is removed from the deck. This card can be used to defuse one bomb that may come in subsequent cards drawn from the deck.
--If the card is a shuffle card, then the game is restarted and the deck is filled with 5 cards again.
-- If the player has any card with him other that exploding kitten card or shuffle card after picking 5 cards the player wins
+1. If the card drawn from the deck is a cat card, then the card is removed from the deck.
+2. If the card is exploding kitten (bomb) then the player loses the game.
+3. If the card is a defusing card, then the card is removed from the deck. This card can be used to defuse one bomb that may come in subsequent cards drawn from the deck.
+4. If the card is a shuffle card, then the game is restarted and the deck is filled with 5 cards again.
+5. If the player has any card with him other that exploding kitten card or shuffle card after picking 5 cards the player wins
 
 # Features
 
@@ -26,8 +26,8 @@ There will be a button to start the game. When the game is started there will be
 
 # start command 
 
- clone the repository
- cd client
- npm install
- npm start
+ 1. clone the repository 
+ 2. cd client
+ 3. npm install
+ 4. npm start
 
