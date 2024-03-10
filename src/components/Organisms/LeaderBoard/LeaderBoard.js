@@ -6,6 +6,8 @@ import Table from "../../Atoms/Table/Table";
 import { setUserStats } from "../../../actions/leaderboardActions";
 
 const LeaderBoard = () => {
+    const SERVICE_URL = " https://server-ph4o5hsjvq-em.a.run.app"
+    const TEST_URL = "http://localhost:8080"
     const dispatch = useDispatch();
     const userStats = useSelector(state => state.leaderboard.userStats);
     const username = localStorage.getItem('username');
@@ -13,7 +15,7 @@ const LeaderBoard = () => {
     useEffect(() => {
         const fetchUserStats = async () => {
             try {
-                const response = await fetch("http://localhost:8080/get-all-usernames");
+                const response = await fetch(`${SERVICE_URL}/get-all-usernames`);
                 const data = await response.json();
 
                 if (response.ok) {

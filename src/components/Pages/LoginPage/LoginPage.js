@@ -9,6 +9,8 @@ import { useSelector } from "react-redux";
 import './LoginPage.css';
 
 const LoginPage = ({ setUsername }) => { 
+    const SERVICE_URL = " https://server-ph4o5hsjvq-em.a.run.app"
+    const TEST_URL = "http://localhost:8080"
     const navigate = useNavigate();
     const [modalOpen, setModalOpen] = useState(false);
     const [playername, setPlayername] = useState("");
@@ -18,7 +20,7 @@ const LoginPage = ({ setUsername }) => {
 
     const handleSubmit = async () => {
         try {
-            const response = await fetch("http://localhost:8080/store-username", {
+            const response = await fetch(`${SERVICE_URL}/store-username`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

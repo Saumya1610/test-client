@@ -8,6 +8,8 @@ import { toast } from 'react-toastify';
 import Button from '../../Atoms/Button/Button';
 
 const Gameboard = () => {
+    const SERVICE_URL = " https://server-ph4o5hsjvq-em.a.run.app"
+    const TEST_URL = "http://localhost:8080"
     const [undrawnCards, setUndrawnCards] = useState([]);
     const [removedCards, setRemovedCards] = useState([]);
     const [userCards, setUserCards] = useState([]);
@@ -25,7 +27,7 @@ const Gameboard = () => {
         if ((apiFetched && undrawnCards.length === 0 )) {
             try {
                 const userId = userStats.find(user => user.player === username)?.id;
-                const url = `http://localhost:8080/updatePlayerStats/${userId}`;
+                const url = `${SERVICE_URL}/updatePlayerStats/${userId}`;
                 const response = await fetch(url, {
                     method: 'POST',
                     headers: {
@@ -61,7 +63,7 @@ const Gameboard = () => {
     
     const fetchRandomCards = async () => {
         try {
-            const response = await fetch('http://localhost:8080/get-random-cards');
+            const response = await fetch(`${SERVICE_URL}/get-random-cards`);
             const data = await response.json();
             if (response.ok) {
                 setUndrawnCards(data.cards);
