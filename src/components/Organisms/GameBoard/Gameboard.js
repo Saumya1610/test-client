@@ -141,7 +141,7 @@ const Gameboard = () => {
                     // Update player stats
                     try {
                         const userId = userStats.find(user => user.player === username)?.id;
-                        const url = `http://localhost:8080/updatePlayerStats/${userId}`;
+                        const url = `${SERVICE_URL}/updatePlayerStats/${userId}`;
                         const response = await fetch(url, {
                             method: 'POST',
                             headers: {
